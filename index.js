@@ -11,13 +11,13 @@ var express = require('express');
 var app = express();
 
 /**
- * Send tasks to queue for processing
+ * Test Fuseki
  *
- * /v1/task_manager/init/tasks
+ * /
  *
  */
 app.get('/', function (req, res) {
-    var Server = require('./lib');
+    var Server = require('./lib/Server');
     var fuseki = new Server();
 
     var query = 'PREFIX d: <http://learningsparql.com/ns/data#>SELECT ?type ?value WHERE { d:x ?type ?value } LIMIT 25';
